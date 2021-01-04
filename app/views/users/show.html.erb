@@ -13,7 +13,7 @@
         <td><strong>Name: </strong> <%= @user.full_name %></td>
         <td><strong>Email: </strong> <%= @user.email %></td>
         <td><% if current_user.not_friends_with?(@user.id) %>
-              <%= link_to 'Follow friend?', friendships_path(@user), class: "btn btn-sm btn-success ml-2", method: :post %>
+              <%= link_to 'Follow friend?', friendships_path(friend: @user), class: "btn btn-sm btn-success ml-2", method: :post %>
             <% else %>
               <span class="badge badge-secondary ml-2">
                 Your are friends
